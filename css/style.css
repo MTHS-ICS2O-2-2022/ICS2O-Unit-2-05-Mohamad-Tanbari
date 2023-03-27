@@ -1,4 +1,13 @@
-/* Created by: Mr. Coxall
-* Created on: Sep 2020
+/* Created by: Mohamad
+* Created on: Sep 2023
 * This file contains the CSS for index.html
 */
+
+.page-content {
+  padding: 5px;
+}
+
+.donut {
+  float: right;
+  width: 300px;
+}
