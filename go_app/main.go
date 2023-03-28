@@ -11,8 +11,8 @@ import (
 
 func main() {
 	// Declare variables
+	taxRate := 0.18 // 18% tax
 	var wage float64
-	var taxRate := 0.18 // 18% tax
 	var hoursWorked float64
 
 	// Get user input
