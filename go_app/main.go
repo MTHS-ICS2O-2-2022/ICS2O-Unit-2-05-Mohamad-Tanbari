@@ -24,12 +24,13 @@ func main() {
 	// Calculate salary
 	var grossPay = wage * hoursWorked
 	var netPay = grossPay - (grossPay * taxRate)
-
- // Round the results to 2 decimal points
+	var tax := grossPay - netPay
+ // Round the results
 	roundedNetPay := fmt.Sprintf("%.2f", netPay)
-	roundedTax := fmt.Sprintf("%.2f", grossPay-netPay)
+	roundedTax := fmt.Sprintf("%.2f", tax)
 
 // Output the results
+
 	fmt.Println("\nYour net pay is:", ("$" + roundedNetPay))
 	fmt.Println("The government took:", ("$" + roundedTax), "from your pay.")
 
