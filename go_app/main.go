@@ -24,7 +24,7 @@ func main() {
 	// Calculate salary
 	var grossPay = wage * hoursWorked
 	var netPay = grossPay - (grossPay * taxRate)
-	var tax float64 = grossPay - netPay
+	var tax = grossPay - netPay
 
 	// Round the results
 	roundedNetPay := fmt.Sprintf("%.2f", netPay)
