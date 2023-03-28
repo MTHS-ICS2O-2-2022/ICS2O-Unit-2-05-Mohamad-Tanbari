@@ -11,10 +11,13 @@ function calculate () {
   // debugging statements
   console.log('button clicked')
 
+  // Tax rate
+  const TAX_RATE = 0.18 // 18%
+
   // recieve input from user
   const hourlyWage = parseInt(document.getElementById('hourly-wage').value)
   const hoursWorked = parseInt(document.getElementById('hours-worked').value)
-  const TAX_RATE = 0.18 // 18%
+
 
   // calcuations
   const grossPay = hourlyWage * hoursWorked
@@ -22,4 +25,5 @@ function calculate () {
 
   // output result into answerbox
   document.getElementById('answer').innerHTML = 'Your net pay is $' + netPay.toFixed(2)
+  document.getElementById('answer2').innerHTML = 'The government took $' + (grossPay * TAX_RATE).toFixed(2) + ' in taxes'
 }

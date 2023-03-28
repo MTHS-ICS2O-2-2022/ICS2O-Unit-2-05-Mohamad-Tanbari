@@ -7,7 +7,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/leekchan/accounting"
 )
 
 func main() {
@@ -26,9 +25,13 @@ func main() {
 	var grossPay = wage * hoursWorked
 	var netPay = grossPay - (grossPay * TAX_RATE)
 
-	// format currency and print results
-	accountingFormater := accounting.Accounting{Symbol: "$", Precision: 2}
-	fmt.Println("Your net pay is: ", accountingFormater.FormatMoney(netPay))
+ // Round the results to 2 decimal points
+	roundedNetPay := fmt.Sprintf("%.2f", netPay)
+	roundedTAX := fmt.Sprintf("%.2f", grossPay-netPay)
+
+// Output the results
+	fmt.Println("\nYour net pay is:", ("$" + roundedNetPay))
+	fmt.Println("The government took:", ("$" + roundedTAX), "from your pay.")
 
 	fmt.Println("\nDone.")
 }
